@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- CSS 는 <style> 태그 내에 작성하는 코드 (HTML 코드와 다름) -->
+    <style>
+        /* style 코드 내 작성하는 코드는 CSS 코드로 */
+        /* HTML 코드와 주석 모양도 다르다 */
+        
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+        }
+
+        /* 하나의 스타일만 적용하더라도 CSS를 이용하는편 */
+        .bg-red{
+            background-color: red;
+        }
+
+        .bg-green{
+            background-color: green;
+        }
+
+        /* 색 적용하기 */
+        .name-color{
+            background-color: blueviolet;
+        }
+
+        /* rgb 로 적용하기 */
+        .rgb-color{
+            background-color: rgb(69, 244, 186);
+        }
+
+        /* hex코드로 적용하기 */
+        .hex-color{
+            background-color: #CC33FF;
+        }
+
+        /* 투명도 설정 (rgba) */
+        .rgba-color{
+            /* 투명도(alpha)는 0~1 사이의 소수. 1은 불투명 */
+            background-color: rgba(255, 0, 0, 0.3);
+        }
+
+        body{
+            background-color: black;
+        }
+
+        /* 투명도 설정 (hex) */
+        .rgba-hex{
+            /* 투명도를 00~ff (0~255) 로 설정 */
+            /* 30% 면 -> 70 -> 45 */
+            background-color: #ff000045;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <!-- 태그에 style을 직접 주는 경우 -->
+    <!-- 중복되는 style에 대해 수정할 때 불편하다. -->
+    <!-- CSS 에 해당 style을 정의내리고, 각 태그에서 이를 불러다 적용 -->
+    <div style="width: 200px; height: 200px; background-color: red;"></div>
+    <div style="width: 200px; height: 200px; background-color: green;"></div>
+    <div style="width: 200px; height: 200px; background-color: blue;"></div>
+
+    <hr>
+
+    <!-- CSS 로 선언한 스타일을 태그에 적용하기 -->
+    <!-- class 속성에 선언한 스타일명 넣기 -->
+    <div class="box" style="background-color: red;"></div>
+    <div class="box" style="background-color: green;"></div>
+    <div class="box" style="background-color: blue;"></div>
+
+    <hr>
+
+    <!-- 하나 이상의 CSS 스타일을 적용하기 -->
+    <div class="box bg-red"></div>
+    <div class="box bg-green"></div>
+
+    <hr>
+
+    <div class="box rgba-hex"></div>
+
+</body>
+</html>

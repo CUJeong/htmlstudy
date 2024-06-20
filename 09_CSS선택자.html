@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 파비콘(favicon), 탭에서 사이트에 대한 아이콘 -->
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+
+    <style>
+
+        /* class 에 대한 선택자 */
+        .box{
+            border: 2px dotted black;
+            width: 200px;
+            height: 200px;
+        }
+
+        /* 모든 div 태그에 style을 적용한다면 (비추) */
+        div{
+            background-color: aquamarine;
+        }
+
+        /* 모든 태그에 style을 적용한다면 */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 특정 id에 대해 style 적용 (완전 비추)*/
+        #one{
+            width: 100px;
+            height: 100px;
+        }
+
+        /* 하나의 태그에 대해서만 style을 주더라도 class를 이용한다. */
+        .one{
+            width: 100px;
+            height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="box"></div>
+
+    <p>마진이 사라졌다..</p>
+
+    <!-- class 속성과 id 속성은 모든 태그에 존재한다. -->
+    <!-- id는 특정 태그를 식별하기 위해 사용된다. -->
+    <!-- 수많은 태그에 대해 중복된 값이 들어가면 안된다. -->
+    <div id="one"></div>
+
+    <div class="one"></div>
+
+    <input type="checkbox" name="" id="">
+
+
+</body>
+</html>

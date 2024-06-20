@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- 태그에 style 속성을 줘서 원하는 형태로 바꿀 수 있다. -->
+    <!-- 한 줄 다 차지하는 style 속성의 이름은 display 이고, 값은 block -->
+    <!-- p 태그는 기본적으로 style - display: block 이 적용된 상태 -->
+    <!-- 본인 영역만 차지하는 style은 display: inline-block -->
+    <p style="display: inline-block;">나는 한 줄 다 차지</p>
+    <span>나는 본인 영역만 차지</span>
+    <span style="display: block;">나는 p태그 처럼 한줄 다 차지하고 싶어</span>
+
+    <h1>글씨를 크게, 글씨를 굵게</h1>
+
+    <!-- font-size: 글자의 크기 지정 -->
+    <!-- font-weight: 글자의 굵기 지정 -->
+    <span style="display: block; font-size: 34px; font-weight: bold;">h1과 동일하게 만들기</span>
+
+    <!-- div는 display: block 정도만 적용된 태그 -->
+    <!-- 화면의 레이아웃을 구성할때 사용 -->
+    <!-- background-color: 태그의 배경 색 지정 -->
+    <!-- color: 태그 내부 글자 색 지정 -->
+    <div style="background-color: rgb(255, 0, 0); color: aliceblue;">div는 정말 많이 쓰인다.</div>
+
+    <!-- border: 테두리 설정 -->
+    <div style="border: 2px solid black;">div 안에 내용물이 있으면, 내용물의 높이만큼 div의 높이가 늘어난다.</div>
+    
+    <!-- width: 너비 설정 -->
+    <!-- height: 높이 설정 -->
+    <div style="border: 2px solid black; height: 100px; width: 300px;">div 안에 내용물이 있으면, 내용물의 높이만큼 div의 높이가 늘어난다.</div>
+
+    <span>div의 width가 작더라도 display가 block이면 한줄 다 차지함</span>
+
+    <!-- text-decoration: 텍스트 꾸미기 (밑줄) -->
+    <div>
+        <a href="https://naver.com" style="text-decoration: none; color: #03C75A;">네이버</a>
+    </div>
+    
+    
+
+</body>
+</html>
