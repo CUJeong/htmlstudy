@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .text{
+            /* 1. 공중으로 띄운다 */
+            position: absolute;
+
+            /* 3. 위치 지정 */
+            top: 40px;
+            left: 100px;
+
+            color: white;
+        }
+
+        .box{
+            /* 2. 공중에 띄운 자식 태그요소를 부모 태그를 기준으로 위치를 지정하기 위해 */
+            /* 부모태그에 position: relative; 를 부여해주어야 한다. */
+            position: relative;
+
+            width: 1200px;
+            height: 200px;
+        }
+
+        .box > img{
+            /* 부모 width 크기를 의미 (1200px이면 100% = 1200px, 50% = 600px 적용) */
+            width: 100%;
+            height: 100%;
+        }
+
+        .text2{
+            position: absolute;
+
+            /* 부모 height의 절반, width의 절반을 의미 */
+            top: 50%;
+            left: 50%;
+
+            /* 자식 크기의 절반만큼 왼쪽, 위쪽 이동 */
+            transform: translate(-50%, -50%);
+
+            color: white;
+        }
+
+        .navigation{
+            /* 브라우저 화면 기준으로 위치시키기 */
+            position: fixed;
+
+            top: 0;
+
+            background-color: white;
+
+            /* 공중으로 띄우면 div가 한줄을 다 차지하지 않게 변함 -> width를 부여 */
+            width: 100%;
+        }
+
+        .quick > div{
+            width: 100px;
+            height: 100px;
+
+            cursor: pointer;
+
+            /* 해당 태그에 style 변화가 일어날 시 변화시간을 줄 수 있다. */
+            transition-duration: 0.5s;  /* 1s 는 1초동안 변화하게 만듬 */
+        }
+
+        /* 마우스 커서를 올렸을때 style 적용 */
+        .quick > div:hover{
+            background-color: orange;
+            color: white;
+        }
+
+        .quick{
+            position: fixed;
+
+            /* 오른쪽 기준으로 위치 지정 */
+            right: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+
+            background-color: white;
+        }
+
+        .top{
+            position: fixed;
+
+            right: 40px;
+            bottom: 40px;
+
+            background-color: greenyellow;
+
+            height: 80px;
+            width: 80px;
+        }
+
+        .top > a{
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <!-- 기본적으로 태그 영역은 서로 겹치지 않는다. -->
+        <img src="./images/background.jpg" alt="">
+        <!-- 겹치게 하기 위해 h1태그를 공중으로 띄운 후 원하는 위치로 이동시킨다. -->
+        <h1 class="text">석양이 진다</h1>
+    </div>
+
+    <div class="box">
+        <img src="./images/background.jpg" alt="">
+        <!-- 중앙으로 이동시키고 싶음 -->
+        <h1 class="text2">석양이 진다</h1>
+    </div>
+
+    <!-- 스크롤이 생기도록 복붙 -->
+    <div class="box">
+        <img src="./images/background.jpg" alt="">
+        <h1 class="text2">석양이 진다</h1>
+    </div>
+    <div class="box">
+        <img src="./images/background.jpg" alt="">
+        <h1 class="text2">석양이 진다</h1>
+    </div>
+    <div class="box">
+        <img src="./images/background.jpg" alt="">
+        <h1 class="text2">석양이 진다</h1>
+    </div>
+    <div class="box">
+        <img src="./images/background.jpg" alt="">
+        <h1 class="text2">석양이 진다</h1>
+    </div> 
+
+    <!-- 화면 상단에 고정되는 네비게이션 바 -->
+    <div class="navigation">
+        <h1>네비게이션</h1>
+    </div>
+
+    <!-- 화면 우측 중앙에 고정되는 퀵 메뉴바 -->
+    <div class="quick">
+        <div>빠른상담</div>
+        <div>카톡상담</div>
+        <div>질문답변</div>
+    </div>
+
+    <div class="top">
+        <!-- ""은 현재 페이지를 의미 (= 새로고침) -->
+        <!-- "#"은 링크이동이 없음을 의미 (새로고침 없이 화면 상단 이동) -->
+        <a href="#">top</a>
+    </div>
+
+
+</body>
+</html>

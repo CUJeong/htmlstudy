@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 구글 폰트 사이트에서 폰트 가져오기 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+
+    <style>
+        div{
+            border: 1px solid black;
+        }
+
+        .title{
+            display: flex;
+            justify-content: center;
+            /* 폰트 적용 */
+            font-family: "Nanum Pen Script", cursive;
+        }
+
+        .item{
+            width: 200px;
+        }
+
+        .prod-img{
+            width: 200px;
+            height: 200px;
+            position: relative;
+        }
+
+        .prod-img > img:nth-child(1){
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        .like {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+
+        .count{
+            display: flex;
+        }
+
+        .count > div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .count > div:nth-child(1), .count > div:nth-child(3){
+            width: 30%;
+        }
+
+        .count > div:nth-child(2){
+            width: 40%;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="title">
+        <h1>금주의 전단세일</h1>
+    </div>
+    <div class="row">
+        <div class="item">
+            <div class="prod-img">
+                <img src="https://shop-phinf.pstatic.net/20221116_280/1668577786349HWiCO_JPEG/29538705263968801_947281928.jpg?type=f450" alt="">
+                <img class="like" src="./images/heart.png" alt="">
+            </div>
+            <div class="count">
+                <div>-</div>
+                <div>0</div>
+                <div>+</div>
+            </div>
+            <div class="content">
+                <div>
+                    <span>전단행사</span>
+                </div>
+                <p>로메인 상추</p>
+                <div>
+                    <span>2,780</span><span>원</span>
+                </div>
+                <div>
+                    <span>(100g당 1,853원)</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

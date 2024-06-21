@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            width: 600px;
+            height: 400px;
+            /* 상하좌우 4방향 border 테두리를 기준으로 안쪽에 여백이 추가된다 */
+            padding: 20px;
+
+            /* 위쪽에만 내부 여백 40px 적용 */
+            /* top, bottom, left, right */
+            padding-top: 40px;
+
+            /* padding을 주면 크기가 변동될 수 있음에 유의 */
+            background-color: bisque;
+        }
+
+        div{
+            border: 2px solid black;
+        }
+
+        .card{
+            width: 200px;
+            height: 200px;
+        }
+
+        .box2{
+            width: 600px;
+            height: 400px;
+        }
+
+        .card2{
+            width: 200px;
+            height: 200px;
+            /* border 테두리를 기준으로 바깥에 상하좌우 여백이 생긴다. */
+            margin: 40px;
+            background-color: beige;
+        }
+
+        .box2 > img{
+            width: 100px;
+            height: 100px;
+            /* 해당 태그 영역에 마우스 커서를 올리면 커서의 모양이 바뀐다 */
+            cursor: pointer;
+            /* margin은 클릭영역에 속하지 않는다 */
+            padding: 40px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <div class="card"></div>
+    </div>
+
+    <div class="box2">
+        <div class="card2"></div>
+    </div>
+
+    <div class="box2">
+        <img src="https://static-00.iconduck.com/assets.00/close-icon-2048x2047-22z7exfk.png" alt="">
+    </div>
+
+</body>
+</html>

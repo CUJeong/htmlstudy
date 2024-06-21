@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            border: 2px solid black;
+            height: 200px;
+
+            /* box 내 요소들 정렬하기 위해 display: flex */
+            display: flex;
+            /* 가로 방향 정렬 위치 설정 (start, center, end) */
+            justify-content: end;
+            /* 세로 방향 정렬 위치 설정 (start, center, end) */
+            align-items: end;
+        }
+
+        .box2{
+            border: 2px solid black;
+            height: 200px;
+
+            /* 내부 요소를 수평나열 (display: block인 애들도 수평나열 시킴) */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box2 > div{
+            border: 2px solid black;
+            width: 100px;
+            height: 30px;
+        }
+
+        .box3{
+            border: 2px solid black;
+            height: 200px;
+
+            display: flex;
+            /* 내부 요소를 찢기 */
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .box3 > div{
+            border: 2px solid black;
+            width: 100px;
+            height: 30px;
+        }
+
+        .navigation{
+            border: 2px solid black;
+
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navigation > div{
+            border: 2px solid red;
+        }
+
+        .navigation > div:nth-child(2){
+            display: flex;
+            align-items: center;
+        }
+
+        .navigation a{
+            padding: 20px;
+        }
+
+        .navigation > div:nth-child(3){
+            display: flex;
+            align-items: center;
+        }
+
+        .dropdown{
+            /* 내부 요소들을 수직방향으로 나열 */
+            display: flex;
+            flex-direction: column;
+
+            position: absolute;
+            /* top 100% + 20px 만큼 수치를 주고 싶다면 */
+            top: calc(100% + 20px);
+            left: 0;
+
+            /* 테두리에 그림자 효과 주기 */
+            /* 첫 번째 px은 그림자의 가로방향 위치 */
+            /* 두 번째 px은 그림자의 세로방향 위치 */
+            /* 세 번째 px은 그림자의 뿌연 정도 */
+            /* 네 번째 px은 그림자의 번짐 정도(크기) */
+            box-shadow: 0px 4px 10px 4px #DDDDDD;
+            background-color: white;
+
+            /* 테두리를 둥글게 */
+            border-radius: 10px;
+
+            /* 화면에 보이지 않게 함 */
+            /* opacity가 0이면 완전 투명, 100%면 완전 불투명 */
+            opacity: 0;
+
+            transition-duration: 0.5s;
+        }
+
+        .menu{
+            position: relative;
+        }
+
+        /* menu에 마우스 커서 올리면, menu의 자식 태그 dropdown에 대해 style 적용 */
+        .menu:hover > .dropdown{
+            opacity: 100%;
+        }
+
+        .btn{
+            background-color: white;
+            border: 1px solid orange;
+            color: orange;
+            border-radius: 20px;
+            padding: 10px;
+            cursor: pointer;
+            transition-duration: 0.5s;
+        }
+
+        .btn:hover{
+            background-color: orange;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="navigation">
+        <div>
+            <img width="200" src="https://cdn.imweb.me/thumbnail/20231106/e591b9177044d.png" alt="">
+        </div>
+        <div>
+            <div class="menu">
+                <a href="">교육원 소개</a>
+                <div class="dropdown">
+                    <a href="">교육원 소개</a>
+                    <a href="">인사말</a>
+                    <a href="">언론보도</a>
+                </div>
+            </div>
+            <div class="menu">
+                <a href="">과정안내</a>
+                <div class="dropdown">
+                    <a href="">교육과정 소개</a>
+                    <a href="">교육일정</a>
+                </div>
+            </div>
+            <div>
+                <a href="">취업센터</a>
+            </div>
+            <div>
+                <a href="">프로젝트</a>
+            </div>
+        </div>
+        <div>
+            <button class="btn">로그인</button>
+            <img width="50" src="https://cdn.imweb.me/upload/S2023070315976c924cb4e/2706a2c258507.png" alt="">
+        </div>
+    </div>
+
+    <div class="box">
+        <a href="">네이버</a>
+        <a href="">구글</a>
+        <a href="">카카오</a>
+    </div>
+
+    <div class="box2">
+        <!-- 수평 방향으로 나열된 상태로 정렬을 하고자 한다. -->
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="box3">
+        <!-- 수평 방향으로 찢기 -->
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    
+    
+
+</body>
+</html>

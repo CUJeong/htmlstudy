@@ -15,11 +15,18 @@
             border: 2px dotted black;
             width: 200px;
             height: 200px;
+            background-color: brown;
         }
 
         /* 모든 div 태그에 style을 적용한다면 (비추) */
         div{
             background-color: aquamarine;
+            border: 2px solid black;
+        }
+
+        /* 모든 img 태그에 style을 적용한다 */
+        img{
+            width: 300px;
         }
 
         /* 모든 태그에 style을 적용한다면 */
@@ -40,11 +47,51 @@
             height: 100px;
         }
 
+        .big{
+            font-size: 30px;
+        }
+
+        /* type이 text인 input 태그에 style 적용 */
+        input[type=text]{
+            font-size: 30px;
+        }
+
+        /* 여름 방학 적혀있는 p태그에 style 주기 */
+        .white{
+            color: white;
+        }
+
+        .container{
+            border: 2px solid red;
+        }
+
+        /* container 클래스를 적용한 태그 내 p태그에 style 적용 */
+        .container p{
+            color: white;
+        }
+
+        /* container 클래스를 적용한 태그의 자식 div태그에 style 적용 */
+        .container > div{
+            background-color: white;
+        }
+
+        /* container 클래스를 적용한 태그의 자식 p태그에 style 적용 */
+        .container > p {
+            font-weight: bold;
+        }
+
+        /* container의 자식 div 태그 중 두번째 태그에 style 적용 */
+        .container > div:nth-child(2){
+            background-color: black;
+        }
+
+
     </style>
 </head>
 <body>
     
     <div class="box"></div>
+    <div class="box" style="background-color: pink;"></div>
 
     <p>마진이 사라졌다..</p>
 
@@ -56,6 +103,20 @@
     <div class="one"></div>
 
     <input type="checkbox" name="" id="">
+    <input type="text">
+    <input type="password">
+
+    <hr>
+
+    <div class="container">
+        <div>
+            <img src="./images/summer.jpg" alt="">
+        </div>
+        <div>
+            <p>여름방학</p>
+        </div>
+        <p>copyright</p>
+    </div>
 
 
 </body>
