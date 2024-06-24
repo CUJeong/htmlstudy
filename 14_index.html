@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>찬웅샵</title>
+
+    <!-- 중복 사용되는 CSS 를 common.css 에 담음 -->
+    <!-- common.css 파일 불러오기 -->
+    <link rel="stylesheet" href="./css/common.css">
+
+    <style>
+        div{
+            border: 0px solid black;
+        }
+
+        .header{
+            height: 400px;
+            /* 내부 요소의 크기가 더 커서 삐져나오는 경우에 대한 style 적용 */
+            /* scroll 스크롤바가 생기게 함 */
+            /* hidden 삐져나오는 부분 안보이게 함 */
+            overflow: hidden;
+            position: relative;
+        }
+
+        .header > video{
+            width: 100%;
+        }
+
+        .header > h1{
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+
+        .title{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .item{
+            /* 부모(row) 기준 1/3 가량 되는 가로 길이 */
+            /* 부모 크기의 1/3 에서 여백으로 줄 10px을 뺀 크기만큼 width를 준다 */
+            width: calc(100%/3 - 10px);
+            box-shadow: 4px 4px 4px 4px #DDDDDD ;
+        }
+
+        .item img{
+            width: 100%;
+            transition-duration: 0.5s;
+        }
+
+        .item img:hover{
+            width: 120%;
+        }
+
+        .item > div:nth-child(1){
+            height: 250px;
+            overflow: hidden;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .row{
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <!-- 메인 페이지를 index 페이지라고 부른다 (파일명도 index.html 국룰) -->
+
+    <!-- 전체 div를 감싸는 container -->
+    <div class="container">
+        <div class="navigation">
+            <div>
+                <h1>찬웅샵</h1>
+            </div>
+            <div>
+                <div class="search">
+                    <input type="text">
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div>
+                <a href="./15_event.html">이벤트</a>
+                <a href="">제품목록</a>
+                <a href="">로그인</a>
+            </div>
+        </div>
+
+        <div class="header">
+            <video src="./videos/cloud.mp4" autoplay muted loop></video>
+            <h1>자연을 담은 화장품</h1>
+        </div>
+
+        <div class="title">
+            <h1>금주 BEST 상품</h1>
+        </div>
+
+        <div class="row">
+
+            <div class="item">
+                <div>
+                    <img src="https://cosmereg.com/wp-content/uploads/2023/03/beauty-g2b308465c_1920-1.jpg" alt="">
+                </div>
+                <div>
+                    <h2>벚꽃 화장품 세트</h2>
+                    <h1>33,900원</h1>
+                </div>
+            </div>
+
+            <div class="item">
+                <div>
+                    <img src="https://health.chosun.com/site/data/img_dir/2023/06/23/2023062301899_0.jpg" alt="">
+                </div>
+                <div>
+                    <h2>앰플 세트</h2>
+                    <h1>56,800원</h1>
+                </div>
+            </div>
+
+            <div class="item">
+                <div>
+                    <img src="https://www.cosmorning.com/data/photos/20230313/art_16801429693994_10a4e8.jpg" alt="">
+                </div>
+                <div>
+                    <h2>과일 화장품 세트</h2>
+                    <h1>42,600원</h1>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <div>
+                <h1>찬웅샵</h1>
+                <hr>
+                <h2>대전광역시 서구 xxxx</h2>
+                <h2>042-344-153x</h2>
+                <h2>akow283@gmail.com</h2>
+            </div>
+            <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3213.5451882561847!2d127.38478522581774!3d36.34757122237961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3565495e77e84f57%3A0xfa7376c5cee9a90e!2z7Jis66as67iM7JiBIOuMgOyghO2DhOuwqeygkA!5e0!3m2!1sko!2skr!4v1719195740346!5m2!1sko!2skr" width="90%" height="90%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+</html>
